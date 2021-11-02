@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using api_devplace.Repository;
+using DevPlace.Blog.API.Repository;
 
-namespace api.devplace.Domain.Models
+namespace DevPlace.Blog.API.Domain.Models
 {
     public class ArticuloBlog : EntityBase
     {

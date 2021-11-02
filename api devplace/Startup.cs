@@ -14,7 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace api.devplace
+namespace DevPlace.Blog.API
 {
     public class Startup
     {
@@ -29,7 +29,7 @@ namespace api.devplace
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<DBcontextapi>(options =>
+            services.AddDbContext<DbContextApi>(options =>
             {
                 options.UseSqlServer(
                     @"Server=(localdb)\mssqllocaldb;Database=CourseLibraryDB;Trusted_Connection=True;");
@@ -59,9 +59,10 @@ namespace api.devplace
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapRazorPages();
-            });
+
+                {
+                    endpoints.MapControllers();
+                });
         }
     }
 }
