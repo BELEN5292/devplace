@@ -8,16 +8,10 @@ namespace DevPlace.Blog.API.Domain.Models
 {
     public class ComentarioBlog : EntityBase
     {
-
         public string Texto { get; set; }
 
-        public ArticuloBlog Articulo { get; set; }
-
-
         public int ArticuloId { get; set; }
-
-
-
+        public ArticuloBlog Articulo { get; set; }        
     }
 }
 

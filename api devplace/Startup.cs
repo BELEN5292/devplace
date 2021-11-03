@@ -18,6 +18,8 @@ namespace DevPlace.Blog.API
 {
     public class Startup
     {
+        private const string ConnectionStringKey = "BlogConnection";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -31,8 +33,9 @@ namespace DevPlace.Blog.API
             services.AddControllers();
             services.AddDbContext<DbContextApi>(options =>
             {
-                options.UseSqlServer(
-                    @"Server=(localdb)\mssqllocaldb;Database=CourseLibraryDB;Trusted_Connection=True;");
+                // Lee el connection string desde el archivo appsettings.com
+                // A partir de ahora, será reconfigurable sin necesidad de recompilar código.
+                options.UseSqlServer(Configuration.GetConnectionString(ConnectionStringKey));
             });
 
         }
