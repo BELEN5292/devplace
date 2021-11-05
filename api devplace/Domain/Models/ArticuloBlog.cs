@@ -12,6 +12,7 @@ namespace DevPlace.Blog.API.Domain.Models
         public string Descripcion { get; set; }
         public string Contenido { get; set; }
         public string Tags { get; set; }
-        public virtual ICollection<ComentarioBlog> Comments { get; set; } = new List<ComentarioBlog>();
+
+        public virtual ICollection<ComentarioBlog> Comentarios { get; set; } = new List<ComentarioBlog>();
     }
 }
