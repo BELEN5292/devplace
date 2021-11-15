@@ -153,7 +153,7 @@ namespace DevPlace.Blog.API.Migrations
             modelBuilder.Entity("DevPlace.Blog.API.Domain.Models.ComentarioBlog", b =>
                 {
                     b.HasOne("DevPlace.Blog.API.Domain.Models.ArticuloBlog", "Articulo")
-                        .WithMany("Comments")
+                        .WithMany("Comentarios")
                         .HasForeignKey("ArticuloId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -163,7 +163,7 @@ namespace DevPlace.Blog.API.Migrations
 
             modelBuilder.Entity("DevPlace.Blog.API.Domain.Models.ArticuloBlog", b =>
                 {
-                    b.Navigation("Comments");
+                    b.Navigation("Comentarios");
                 });
 #pragma warning restore 612, 618
         }
