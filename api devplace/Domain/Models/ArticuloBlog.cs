@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DevPlace.Blog.API.Domain.Respositorio;
 using DevPlace.Blog.API.Repository;
 
 namespace DevPlace.Blog.API.Domain.Models
