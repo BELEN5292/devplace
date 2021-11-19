@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DevPlace.Blog.API.Domain.Models;
-using DevPlace.Blog.API.Domain.Validacion;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using DevPlace.Blog.API.Repository.EntityConfiguration.Extensions;
+using DevPlace.Blog.API.Domain.Validation;
 
 namespace DevPlace.Blog.API.Repository.EntityConfigurations
 {
